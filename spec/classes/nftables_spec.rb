@@ -73,11 +73,6 @@ describe 'gin', type: :class do
         it { is_expected.to contain_nftables__rule('postrouting6-ip6nat_type') }
         it { is_expected.to contain_nftables__rule('prerouting-ipnat_policy') }
         it { is_expected.to contain_nftables__rule('prerouting-ipnat_type') }
-        it { is_expected.to contain_nftables__rule('postrouting-iprouter_type') }
-        it { is_expected.to contain_nftables__rule('postrouting6-ip6nat_policy') }
-        it { is_expected.to contain_nftables__rule('postrouting6-ip6nat_type') }
-        it { is_expected.to contain_nftables__rule('prerouting-ipnat_policy') }
-        it { is_expected.to contain_nftables__rule('prerouting-ipnat_type') }
         it { is_expected.to contain_nftables__rule('prerouting-iprouter_type') }
         it { is_expected.to contain_nftables__rule('prerouting6-ip6nat_policy') }
         it { is_expected.to contain_nftables__rule('prerouting6-ip6nat_type') }

@@ -39,6 +39,11 @@ appveyor.yml:
     - /modules/
     - /lib/tasks/
     - /data/rspec/
+.rubocop.yml:
+  default_configs:
+    AllCops:
+      Exclude:
+        - 'modules/**/*'
 Gemfile:
   optional:
     ':development':
@@ -100,6 +105,8 @@ spec/default_facts.yml:
     pe_build: null
     service_provider: systemd
     root_home: /root
+    sudoversion: '1.7.3'
+    memorysize_mb: 2048
 
 spec/spec_helper.rb:
   coverage_report: true
