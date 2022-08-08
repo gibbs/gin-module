@@ -1,5 +1,7 @@
 # Gin Module
 
+[![CI](https://github.com/gibbs/gin-module/actions/workflows/ci.yaml/badge.svg)](https://github.com/gibbs/gin-module/actions/workflows/ci.yaml)
+
 **This module is not intended to be used as a standard Puppet module.**
 
 Gin is an implementation module with opinionated and generalised defaults.

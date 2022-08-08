@@ -14,6 +14,5 @@ pe_configpath:
 pe_build:
 service_provider: systemd
 root_home: "/root"
-
 sudoversion: '1.7.3'
 memorysize_mb: 2048
