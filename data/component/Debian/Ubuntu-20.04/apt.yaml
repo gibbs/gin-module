@@ -1,0 +1,83 @@
+gin::apt:
+  purge:
+    sources.list: true
+    sources.list.d: true
+
+gin::apt_sources:
+  puppet7:
+    location: http://apt.puppetlabs.com
+    release: focal
+    repos: puppet7
+    include:
+      deb: true
+      src: false
+  ubuntu:
+    location: http://archive.ubuntu.com/ubuntu
+    release: focal
+    repos: main restricted
+    include:
+      deb: true
+      src: false
+  ubuntu-updates:
+    location: http://archive.ubuntu.com/ubuntu
+    release: focal-updates
+    repos: main restricted
+    include:
+      deb: true
+      src: false
+  ubuntu-universe:
+    location: http://archive.ubuntu.com/ubuntu
+    release: focal
+    repos: universe
+    include:
+      deb: true
+      src: false
+  ubuntu-universe-updates:
+    location: http://archive.ubuntu.com/ubuntu
+    release: focal-updates
+    repos: universe
+    include:
+      deb: true
+      src: false
+  ubuntu-multiverse:
+    location: http://archive.ubuntu.com/ubuntu
+    release: focal
+    repos: multiverse
+    include:
+      deb: true
+      src: false
+  ubuntu-multiverse-updates:
+    location: http://archive.ubuntu.com/ubuntu
+    release: focal-updates
+    repos: multiverse
+    include:
+      deb: true
+      src: false
+  ubuntu-backports:
+    location: http://archive.ubuntu.com/ubuntu
+    release: focal-backports
+    repos: main restricted universe multiverse
+    include:
+      deb: true
+      src: false
+  ubuntu-security:
+    location: http://archive.ubuntu.com/ubuntu
+    release: focal-security
+    repos: main restricted
+    include:
+      deb: true
+      src: false
+  ubuntu-security-universe:
+    location: http://archive.ubuntu.com/ubuntu
+    release: focal-security
+    repos: universe
+    include:
+      deb: true
+      src: false
+  ubuntu-security-multiverse:
+    location: http://archive.ubuntu.com/ubuntu
+    release: focal-security
+    repos: multiverse
+    include:
+      deb: true
+      src: false

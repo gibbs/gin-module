@@ -1,0 +1,5 @@
+gin::sysctl:
+  net.ipv4.ip_forward:
+    value: 0
+  net.ipv6.conf.all.forwarding:
+    value: 0

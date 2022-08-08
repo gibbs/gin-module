@@ -1,0 +1,12 @@
+gin::files:
+  test1:
+    path: /tmp/test1
+    content: 'test 123'
+
+  /tmp/dir1:
+    ensure: directory
+
+  test2:
+    ensure: absent
+    path: /tmp/test2
+    content: 'test 123'

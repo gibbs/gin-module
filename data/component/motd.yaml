@@ -1,0 +1,12 @@
+gin::motd:
+  issue_content: |
+    Unauthorised access or use of this equipment is prohibited and constitutes
+    an offence under the Computer Misuse Act 1990.
+
+    If you are not authorised to use this system, terminate this session now.
+
+    By continuing to connect to this system, you consent to the owner storing
+    a log of all activity.
+  disable_update_motd:
+    - /etc/update-motd.d/85-fwupd
+    - /etc/update-motd.d/98-cloudguest

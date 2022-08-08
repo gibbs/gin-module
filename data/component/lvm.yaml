@@ -1,0 +1,3 @@
+gin::lvm:
+  package_ensure: installed
+  manage_pkg: true

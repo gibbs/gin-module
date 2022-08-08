@@ -1,0 +1,19 @@
+# Use default_module_facts.yml for module specific facts.
+#
+# Facts specified here will override the values provided by rspec-puppet-facts.
+---
+ipaddress: "172.16.254.254"
+ipaddress6: "FE80:0000:0000:0000:AAAA:AAAA:AAAA"
+is_pe: false
+macaddress: "AA:AA:AA:AA:AA:AA"
+environment: rspec
+pe_server_version:
+pe_logpath:
+pe_journalpath:
+pe_configpath:
+pe_build:
+service_provider: systemd
+root_home: "/root"
+
+sudoversion: '1.7.3'
+memorysize_mb: 2048

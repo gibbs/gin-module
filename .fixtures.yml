@@ -1,0 +1,134 @@
+---
+fixtures:
+  repositories:
+    stdlib:
+      repo: "https://github.com/puppetlabs/puppetlabs-stdlib"
+      ref:  "v6.6.0"
+    accounts:
+      repo: "https://github.com/puppetlabs/puppetlabs-accounts"
+      ref:  "v7.2.0"
+    aide:
+      repo: "https://github.com/indiana-university/puppet-aide"
+      ref:  "v2.0.0"
+    alternatives:
+      repo: "https://github.com/voxpupuli/puppet-alternatives"
+      ref:  "v4.1.0"
+    archive:
+      repo: "https://github.com/voxpupuli/puppet-archive"
+      ref:  "v6.0.2"
+    apt:
+      repo: "https://github.com/puppetlabs/puppetlabs-apt"
+      ref:  "v8.4.1"
+    auditd:
+      repo: "https://github.com/gibbs/puppet-auditd/"
+      ref:  "v1.0.1"
+    augeas:
+      repo: "https://github.com/camptocamp/puppet-augeas"
+      ref:  "1.9.0"
+    augeas_core:
+      repo: "https://github.com/puppetlabs/puppetlabs-augeas_core"
+      ref:  "v1.2.0"
+    augeasproviders_core:
+      repo: "https://github.com/voxpupuli/puppet-augeasproviders_core"
+      ref:  "3.1.0"
+    augeasproviders_sysctl:
+      repo: "https://github.com/voxpupuli/puppet-augeasproviders_sysctl"
+      ref:  "2.6.2"
+    concat:
+      repo: "https://github.com/puppetlabs/puppetlabs-concat"
+      ref:  "v6.4.0"
+    cron:
+      repo: "https://github.com/voxpupuli/puppet-cron"
+      ref:  "v3.0.0"
+    cron_core:
+      repo: "https://github.com/puppetlabs/puppetlabs-cron_core"
+      ref:  "v1.1.0"
+    debconf:
+      repo: "https://github.com/smoeding/puppet-debconf"
+      ref:  "v4.1.0"
+    docker:
+      repo: "https://github.com/puppetlabs/puppetlabs-docker"
+      ref:  "v4.4.0"
+    epel:
+      repo: "https://github.com/voxpupuli/puppet-epel"
+      ref:  "v4.1.0"
+    host_core:
+      repo: "https://github.com/puppetlabs/puppetlabs-host_core"
+      ref:  "v1.1.0"
+    inifile:
+      repo: "https://github.com/puppetlabs/puppetlabs-inifile"
+      ref:  "v5.2.0"
+    kmod:
+      repo: "https://github.com/voxpupuli/puppet-kmod"
+      ref:  "v3.2.0"
+    libvirt:
+      repo: "https://github.com/cirrax/puppet-libvirt/"
+      ref:  "v4.3.4"
+    locales:
+      repo: "https://github.com/saz/puppet-locales"
+      ref:  "v3.1.1"
+    login_defs:
+      repo: "https://github.com/gibbs/puppet-login_defs"
+      ref:  "v1.0.0"
+    logrotate:
+      repo: "https://github.com/voxpupuli/puppet-logrotate"
+      ref:  "v6.0.0"
+    lvm:
+      repo: "https://github.com/puppetlabs/puppetlabs-lvm"
+      ref:  "v1.4.0"
+    mount_core:
+      repo: "https://github.com/puppetlabs/puppetlabs-mount_core"
+      ref:  "v1.1.0"
+    nftables:
+      repo: "https://github.com/voxpupuli/puppet-nftables"
+      ref:  "v2.4.0"
+    nsswitch:
+      repo: "https://github.com/trlinkin/puppet-nsswitch"
+      ref:  "2.2.0"
+    pam:
+      repo: "https://github.com/ghoneycutt/puppet-module-pam"
+      ref:  "v3.7.0"
+    posix_acl:
+      repo: "https://github.com/voxpupuli/puppet-posix_acl"
+      ref:  "v2.0.0"
+    rkhunter:
+      repo: "https://github.com/voxpupuli/puppet-rkhunter"
+      ref:  "v2.2.0"
+    rhsm:
+      repo: "https://github.com/voxpupuli/puppet-rhsm"
+      ref:  "v5.0.0"
+    snmp:
+      repo: "https://github.com/voxpupuli/puppet-snmp"
+      ref:  "v6.0.0"
+    ssh:
+      repo: "https://github.com/saz/puppet-ssh"
+      ref:  "v9.0.0"
+    ssh_keygen:
+      repo: "https://github.com/voxpupuli/puppet-ssh_keygen"
+      ref:  "v5.0.2"
+    sshkeys_core:
+      repo: "https://github.com/puppetlabs/puppetlabs-sshkeys_core"
+      ref:  "v2.3.0"
+    systemd:
+      repo: "https://github.com/voxpupuli/puppet-systemd"
+      ref:  "v3.10.0"
+    sysstat:
+      repo: "https://github.com/Q-Technologies/puppet-sysstat"
+      ref:  "1.2.6"
+    sudo:
+      repo: "https://github.com/saz/puppet-sudo/"
+      ref:  "v7.0.2"
+    timezone:
+      repo: "https://github.com/saz/puppet-timezone"
+      ref:  "v6.1.0"
+    vcsrepo:
+      repo: "https://github.com/puppetlabs/puppetlabs-vcsrepo"
+      ref:  "v5.2.0"
+    yum:
+      repo: "https://github.com/voxpupuli/puppet-yum"
+      ref:  "v5.6.1"
+    yumrepo_core:
+      repo: "https://github.com/puppetlabs/puppetlabs-yumrepo_core"
+      ref:  "v1.1.0"
+  symlinks:
+    gin: "#{source_dir}"

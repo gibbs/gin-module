@@ -1,0 +1,8 @@
+gin::epel:
+  epel_managed: true
+  epel_testing_managed: true
+  epel_source_managed: true
+  epel_debuginfo_managed: true
+  epel_testing_source_managed: true
+  epel_testing_debuginfo_managed: true
+  epel_gpg_managed: true

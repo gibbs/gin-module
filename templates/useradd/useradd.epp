@@ -1,0 +1,7 @@
+# THIS FILE IS MANAGED BY PUPPET
+GROUP=<%= $parameters['group'] %>
+HOME=<%= $parameters['home'] %>
+INACTIVE=<%= $parameters['inactive'] %>
+EXPIRE=<%= $parameters['expire'] %>
+SHELL=<%= $parameters['shell'] %>
+SKEL=<%= $parameters['skel'] %>

@@ -1,0 +1,32 @@
+# @see https://github.com/puppetlabs/puppetlabs-vcsrepo/blob/main/REFERENCE.md#vcsrepo
+type Gin::Repository = Struct[
+  {
+    Optional['basic_auth_password'] => String,
+    Optional['basic_auth_username'] => String,
+    Optional['branch']              => String,
+    Optional['compression']         => Integer,
+    Optional['configuration']       => Stdlib::Unixpath,
+    Optional['conflict']            => Any,
+    Optional['cvs_rsh']             => Any,
+    Optional['depth']               => Any,
+    Optional['ensure']              => Enum['present', 'bare', 'mirror', 'absent', 'latest'],
+    Optional['excludes']            => Any,
+    Optional['force']               => Enum['true', 'false', 'yes', 'no'],
+    Optional['fstype']              => String,
+    Optional['group']               => Variant[Integer, String],
+    Optional['identity']            => Stdlib::Unixpath,
+    Optional['includes']            => Array,
+    Optional['keep_local_changes']  => Boolean,
+    Optional['module']              => String,
+    Optional['owner']               => Variant[Integer, String],
+    Optional['p4config']            => Any,
+    Optional['path']                => Stdlib::Unixpath,
+    Optional['provider']            => Any,
+    Optional['remote']              => String,
+    Optional['revision']            => Variant[Integer, String],
+    Optional['source']              => Variant[Hash, String],
+    Optional['submodules']          => Boolean,
+    Optional['trust_server_cert']   => Boolean,
+    Optional['user']                => Variant[Integer, String],
+  }
+]

@@ -1,0 +1,47 @@
+gin::lvm:
+  package_ensure: installed
+  manage_pkg: true
+
+gin::lvm_volumes:
+  mylv:
+    ensure: present
+    vg: myvg
+    pv: /dev/hdc
+    fstype: ext3
+    size: 20G
+
+# Verbose
+gin::lvm_logical_volumes:
+  mylv2:
+    ensure: present
+    volume_group: myvg2
+    size: 20G
+
+gin::lvm_volume_groups:
+  myvg2:
+    ensure: present
+    physical_volumes: /dev/sdb
+  myvg3:
+    ensure: present
+    physical_volumes:
+      - /dev/sda2
+      - /dev/sda3
+    logical_volumes:
+      opt:
+        size: 20GB
+      tmp:
+        size: 1G
+      usr:
+        size: 3G
+      var:
+        size: 15G
+      home:
+        size: 5G
+      backup:
+        size: 5G
+        mountpath: /var/backups
+        mountpath_require: false
+
+gin::lvm_physical_volumes:
+  /dev/sdb3:
+    ensure: present

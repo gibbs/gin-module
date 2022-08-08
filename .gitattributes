@@ -1,0 +1,16 @@
+*.rb eol=lf
+*.erb eol=lf
+*.pp eol=lf
+*.sh eol=lf
+*.epp eol=lf
+* text=auto eol=lf
+/lib/tasks/ export-ignore
+/spec/ export-ignore
+.editorconfig export-ignore
+.gitattributes export-ignore
+.puppet-lint.rc export-ignore
+.gitignore export-ignore
+.rspec export-ignore
+.ruby-version export-ignore
+Gemfile.lock export-ignore
+Rakefile export-ignore

@@ -1,0 +1,2 @@
+gin::rkhunter:
+  allow_ssh_root_user: 'no'

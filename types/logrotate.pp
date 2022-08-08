@@ -1,0 +1,31 @@
+# @see https://github.com/voxpupuli/puppet-logrotate/blob/v6.0.0/manifests/init.pp
+type Gin::Logrotate = Struct[
+  {
+    Optional['ensure']               => String,
+    Optional['hieramerge']           => Boolean,
+    Optional['manage_cron_daily']    => Boolean,
+    Optional['manage_cron_hourly']   => Boolean,
+    Optional['ensure_cron_daily']    => Enum[present,absent],
+    Optional['ensure_cron_hourly']   => Enum[present,absent],
+    Optional['create_base_rules']    => Boolean,
+    Optional['purge_configdir']      => Boolean,
+    Optional['package']              => String,
+    Optional['rules']                => Hash,
+    Optional['config']               => Hash,
+    Optional['cron_daily_hour']      => Integer[0,23],
+    Optional['cron_daily_minute']    => Integer[0,59],
+    Optional['cron_hourly_minute']   => Integer[0,59],
+    Optional['cron_file_mode']       => Stdlib::Filemode,
+    Optional['configdir']            => String,
+    Optional['logrotate_bin']        => String,
+    Optional['logrotate_conf']       => String,
+    Optional['logrotate_conf_mode']  => Stdlib::Filemode,
+    Optional['manage_package']       => Boolean,
+    Optional['rules_configdir']      => String,
+    Optional['rules_configdir_mode'] => Stdlib::Filemode,
+    Optional['root_user']            => String,
+    Optional['root_group']           => String,
+    Optional['logrotate_args']       => Array[String[1]],
+    Optional['cron_always_output']   => Boolean,
+  }
+]

@@ -1,0 +1,6 @@
+gin::motd:
+  issue_content: |
+    MOTD issue content
+  disable_update_motd:
+    - /etc/update-motd.d/85-fwupd
+    - /etc/update-motd.d/98-cloudguest

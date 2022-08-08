@@ -1,0 +1,45 @@
+gin::pam:
+  manage_nsswitch: false
+  allowed_users:
+    root:
+      - 'ALL'
+  pam_auth_lines:
+    - 'auth [success=1 default=ignore]  pam_unix.so nullok_secure'
+    - 'auth requisite pam_deny.so'
+    - 'auth required  pam_permit.so'
+    - 'auth optional  pam_cap.so'
+    - 'auth required  pam_tally2.so onerr=fail audit silent deny=5 unlock_time=900'
+  pam_password_lines:
+    - 'password [success=1 default=ignore]  pam_unix.so obscure sha512'
+    - 'password requisite pam_deny.so'
+    - 'password requisite pam_pwquality.so retry=3'
+    - 'password required pam_permit.so'
+    - 'password required pam_pwhistory.so remember=5'
+  limits_fragments:
+    core:
+      list:
+        - '* hard core 0'
+        - '* soft core 0'
+
+gin::pam_services:
+  su:
+    lines:
+      - 'auth     sufficient  pam_rootok.so'
+      - 'auth     required    pam_wheel.so'
+      - 'session  required    pam_env.so readenv=1'
+      - 'session  required    pam_env.so readenv=1 envfile=/etc/default/locale'
+      - 'session  optional    pam_mail.so nopen'
+      - 'session  required    pam_limits.so'
+      - '@include common-auth'
+      - '@include common-account'
+      - '@include common-session'
+  pwquality.conf:
+    pam_config_dir: /etc/security
+    lines:
+      - 'minlen = 14'
+      - 'minclass = 0'
+      - 'maxrepeat = 0'
+      - 'dcredit = -1'
+      - 'ucredit = -1'
+      - 'ocredit = -1'
+      - 'lcredit = -1'

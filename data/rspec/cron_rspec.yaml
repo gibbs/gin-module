@@ -1,0 +1,8 @@
+gin::cron_jobs:
+  laravel-schedule:
+    command:  /usr/bin/docker exec my-docker-app /usr/local/bin/php /var/www/html/artisan schedule:run >> /dev/null 2>&1
+    minute:   '*'
+    hour:     '*'
+    monthday: '*'
+    month:    '*'
+    weekday:  '*'

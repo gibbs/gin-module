@@ -1,0 +1,12 @@
+gin::kmod:
+  list_of_blacklists:
+    hfs:
+      ensure: present
+    hfsplus:
+      ensure: present
+
+  list_of_installs:
+    hfs:
+      command: /bin/true
+    hfsplus:
+      command: /bin/true

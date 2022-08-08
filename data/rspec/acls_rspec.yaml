@@ -1,0 +1,15 @@
+gin::acls:
+  /var/log/httpd:
+    action: set
+    recursive: false
+    permission:
+      - 'user::rwx'
+      - 'group::---'
+      - 'mask::r-x'
+      - 'other::---'
+      - 'group:logview:r-x'
+      - 'default:user::rwx'
+      - 'default:group::---'
+      - 'default:mask::rwx'
+      - 'default:other::---'
+      - 'default:group:logview:r-x'

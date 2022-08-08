@@ -1,0 +1,10 @@
+gin::snmp:
+  agentaddress:
+    - "udp:127.0.0.1:161"
+    - "udp6:[::1]::161"
+  snmptrapdaddr:
+    - "udp:127.0.0.1:162"
+    - "udp6:[::1]::162"
+  ro_community: public
+  ro_community6: public
+  sysname: "%{facts.networking.fqdn}"

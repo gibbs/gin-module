@@ -1,0 +1,162 @@
+gin::nftables:
+  nat_table_name: 'nat'
+  log_prefix: '[nftables] %<chain>s %<comment>s'
+  log_limit: 3/minute burst 5 packets
+  reject_with: icmpx type port-unreachable
+  noflush_tables:
+    - inet-fail2ban
+
+gin::nftables_conf:
+  inet-filter: {}
+  ip-nat: {}
+  ip6-nat: {}
+  ip-router: {}
+
+gin::nftables_chains:
+  inet-filter:
+    input: {}
+    output: {}
+    forward: {}
+    global: {}
+    default_input:
+      inject: 10-input
+    default_output:
+      inject: 10-output
+    default_forward:
+      inject: 10-forward
+  ip-nat:
+    input: {}
+    output: {}
+    prerouting: {}
+    postrouting: {}
+  ip6-nat:
+    prerouting6: {}
+    postrouting6: {}
+  ip-router:
+    prerouting: {}
+    postrouting: {}
+
+gin::nftables_rules:
+  inet-filter:
+    input:
+      type:
+        order: '01'
+        content: type filter hook input priority 0
+      policy:
+        order: '02'
+        content: policy drop
+      lo:
+        order: '03'
+        content: iifname lo accept
+      jump_global:
+        order: '04'
+        content: jump global
+      ct_state:
+        order: '05'
+        content: ct state established,related accept
+      ct_drop_invalid:
+        order: '07'
+        content: ct state invalid drop
+      log_discarded:
+        order: '97'
+        content: limit rate 3/minute burst 5 packets log prefix "[nftables] INPUT" flags all counter
+
+    output:
+      type:
+        order: '01'
+        content: type filter hook output priority 0
+      policy:
+        order: '02'
+        content: policy drop
+      lo:
+        order: '03'
+        content: oifname lo accept
+      jump_global:
+        order: '04'
+        content: jump global
+      log_discarded:
+        order: '05'
+        content: limit rate 3/minute burst 5 packets log prefix "[nftables] FORWARD" flags all counter
+      ct_accept:
+        order: '05'
+        content: ct state established,related accept
+      ct_drop:
+        order: '06'
+        content: ct state invalid drop
+
+    forward:
+      type:
+        order: '01'
+        content: type filter hook forward priority 0
+      policy:
+        order: '02'
+        content: policy drop
+      jump_global:
+        order: '03'
+        content: jump global
+      log_discarded:
+        order: '97'
+        content: limit rate 3/minute burst 5 packets log prefix "[nftables] FORWARD" flags all counter
+
+    default_input:
+      ssh:
+        order: '30'
+        content: "tcp dport 22 accept"
+
+    default_output:
+      all:
+        order: '90'
+        content: accept
+
+  ip-nat:
+    prerouting:
+      type:
+        order: '01'
+        content: type nat hook prerouting priority -100
+      policy:
+        order: '02'
+        content: policy accept
+
+    postrouting:
+      type:
+        order: '01'
+        content: type nat hook postrouting priority 100
+      policy:
+        order: '02'
+        content: policy accept
+
+    input:
+      type:
+        order: '01'
+        content: type nat hook input priority 100
+      policy:
+        order: '02'
+        content: policy accept
+
+  ip6-nat:
+    prerouting6:
+      type:
+        order: '01'
+        content: type nat hook prerouting priority -100
+      policy:
+        order: '02'
+        content: policy accept
+
+    postrouting6:
+      type:
+        order: '01'
+        content: type nat hook postrouting priority 100
+      policy:
+        order: '02'
+        content: policy accept
+
+  ip-router:
+    prerouting:
+      type:
+        order: '01'
+        content: type nat hook prerouting priority 0
+
+    postrouting:
+      type:
+        order: '01'
+        content: type nat hook postrouting priority 100

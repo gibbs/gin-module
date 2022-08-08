@@ -1,0 +1,215 @@
+gin::aide:
+  version: installed
+  db_path: /var/lib/aide/aide.db
+  db_temp_path: /var/lib/aide/aide.db.new.gz
+  aide_log: /var/log/aide/aide.log
+  syslogout: true
+  hour: 7
+  minute: 0
+  mail_only_on_changes: true
+  init_timeout: 600
+
+gin::aide_rules:
+  ALLXTRAHASHES:
+    rules: sha1+rmd160+sha256+sha512+tiger
+  CONTENT_EX:
+    rules: sha256+ftype+p+u+g+n+acl+selinux+xattrs
+  DATAONLY:
+    rules: p+n+u+g+s+acl+selinux+xattrs+sha512
+  DIR:
+    rules: p+i+n+u+g+acl+selinux+xattrs
+  FIPSR:
+    rules: p+i+n+u+g+s+m+c+acl+selinux+xattrs+sha256
+  LOG:
+    rules: p+i+n+u+g+S
+  LSPP:
+    rules: FIPSR+sha512
+  NORMAL:
+    rules: FIPSR+sha512
+  PERMS:
+    rules: p+i+u+g+acl+selinux
+
+gin::aide_watch:
+  boot:
+    path: /boot
+    rules: NORMAL
+  bin:
+    path: /bin
+    rules: NORMAL
+  sbin:
+    path: /sbin
+    rules: NORMAL
+  lib:
+    path: /lib
+    rules: NORMAL
+  lib64:
+    path: /lib64
+    rules: NORMAL
+  opt:
+    path: /opt
+    rules: NORMAL
+  usr:
+    path: /usr
+    rules: NORMAL
+  root:
+    path: /root
+    rules: NORMAL
+  root_exclude:
+    path: /root/.cache/
+    type: exclude
+  root_dotfiles:
+    path: /root/\..*
+    rules: NORMAL
+  usr_src_exclude:
+    path: /usr/src
+    type: exclude
+  usr_tmp_exclude:
+    path: /usr/tmp
+    type: exclude
+  etc:
+    path: /etc
+    rules: PERMS
+  etc_mtab_exclude:
+    path: /etc/mtab
+    type: exclude
+  etc_backup_exclude:
+    path: /etc/.*~
+    type: exclude
+  etc_exports:
+    path: /etc/exports
+    rules: NORMAL
+  etc_fstab:
+    path: /etc/fstab
+    rules: NORMAL
+  etc_passwd:
+    path: /etc/passwd
+    rules: NORMAL
+  etc_group:
+    path: /etc/group
+    rules: NORMAL
+  etc_gshadow:
+    path: /etc/gshadow
+    rules: NORMAL
+  etc_shadow:
+    path: /etc/shadow
+    rules: NORMAL
+  etc_security_opasswd:
+    path: /etc/security/opasswd
+    rules: NORMAL
+  etc_hosts_allow:
+    path: /etc/hosts.allow
+    rules: NORMAL
+  etc_hosts_deny:
+    path: /etc/hosts.deny
+    rules: NORMAL
+  etc_sudoers:
+    path: /etc/sudoers
+    rules: NORMAL
+  etc_skel:
+    path: /etc/skel
+    rules: NORMAL
+  etc_logrotate:
+    path: /etc/logrotate.d
+    rules: NORMAL
+  etc_resolv:
+    path: /etc/resolv.conf
+    rules: DATAONLY
+  etc_profile:
+    path: /etc/profile
+    rules: NORMAL
+  etc_bash_completion:
+    path: /etc/bash_completion.d/
+    rules: NORMAL
+  etc_login_defs:
+    path: /etc/login.defs
+    rules: NORMAL
+  etc_profiled:
+    path: /etc/profile.d/
+    rules: NORMAL
+  etc_x11:
+    path: /etc/X11/
+    rules: NORMAL
+  var_log:
+    path: /var/log
+    rules: LOG
+  var_run_utmp:
+    path: /var/run/utmp
+    rules: LOG
+  var_log_aide:
+    path: /var/log/aide/aide.log
+    type: exclude
+  etc_at_allow:
+    path: /etc/at.allow
+    rules: LSPP
+  etc_at_deny:
+    path: /etc/at.deny
+    rules: LSPP
+  etc_cron_allow:
+    path: /etc/cron.allow
+    rules: LSPP
+  etc_cron_deny:
+    path: /etc/cron.deny
+    rules: LSPP
+  etc_cron:
+    path: /etc/cron.d/
+    rules: LSPP
+  etc_cron_daily:
+    path: /etc/cron.daily/
+    rules: LSPP
+  etc_cron_hourly:
+    path: /etc/cron.hourly/
+    rules: LSPP
+  etc_cron_monthly:
+    path: /etc/cron.monthly/
+    rules: LSPP
+  etc_cron_weekly:
+    path: /etc/cron.weekly/
+    rules: LSPP
+  etc_crontab:
+    path: /etc/crontab
+    rules: LSPP
+  etc_logindefs:
+    path: /etc/login.defs
+    rules: LSPP
+  var_log_faillog:
+    path: /var/log/faillog
+    rules: LSPP
+  var_log_lastlog:
+    path: /var/log/lastlog
+    rules: LSPP
+  etc_hosts:
+    path: /etc/hosts
+    rules: LSPP
+  etc_ldso:
+    path: /etc/ld.so.conf
+    rules: LSPP
+  etc_localtime:
+    path: /etc/localtime
+    rules: LSPP
+  etc_sysctl:
+    path: /etc/sysctl.conf
+    rules: LSPP
+  etc_modprobe:
+    path: /etc/modprobe.conf
+    rules: LSPP
+  etc_pamd:
+    path: /etc/pam.d
+    rules: LSPP
+  etc_security:
+    path: /etc/security
+    rules: LSPP
+  etc_aliases:
+    path: /etc/aliases
+    rules: LSPP
+  etc_sshd_config:
+    path: /etc/ssh/sshd_config
+    rules: LSPP
+  etc_ssh_config:
+    path: /etc/ssh/ssh_config
+    rules: LSPP
+  etc_issue:
+    path: /etc/issue
+    rules: LSPP
+  etc_issue_net:
+    path: /etc/issue.net
+    rules: LSPP

@@ -1,0 +1,13 @@
+gin::docker:
+  ensure: installed
+  docker_ee: false
+  iptables: false
+  socket_bind: 'unix:///var/run/docker.sock'
+  extra_parameters:
+    - '--ip=127.0.0.1'
+    - '--experimental=true'
+    - "--metrics-addr=127.0.0.1:9323"
+
+gin::docker_compose:
+  ensure: present
+  version: '3.7.0'

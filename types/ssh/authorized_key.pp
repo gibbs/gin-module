@@ -1,0 +1,36 @@
+# @see https://github.com/puppetlabs/puppetlabs-sshkeys_core/tree/v2.3.0
+type Gin::SSH::Authorized_Key = Struct[
+  {
+    Optional['drop_privileges'] => Enum['true', 'false', 'yes', 'no'],
+    Optional['ensure']          => Enum['present', 'absent'],
+    Optional['host_aliases']    => Array,
+    Optional['key']             => String[1],
+    Optional['name']            => String,
+    Optional['options']         => Array,
+    Optional['provider']        => Any,
+    Optional['sshkey']          => Any,
+    Optional['target']          => Any,
+    Optional['type']            => Enum[
+      'ssh-dss',
+      'ssh-rsa',
+      'ecdsa-sha2-nistp256',
+      'ecdsa-sha2-nistp384',
+      'ecdsa-sha2-nistp521',
+      'ssh-ed25519',
+      'sk-ecdsa-sha2-nistp256@openssh.com',
+      'sk-ssh-ed25519@openssh.com',
+      'ssh-rsa-cert-v01@openssh.com',
+      'ssh-ed25519-cert-v01@openssh.com',
+      'ssh-dss-cert-v01@openssh.com',
+      'ecdsa-sha2-nistp256-cert-v01@openssh.com',
+      'ecdsa-sha2-nistp384-cert-v01@openssh.com',
+      'ecdsa-sha2-nistp521-cert-v01@openssh.com',
+      'dsa',
+      'ed25519',
+      'rsa',
+      'ecdsa-sk',
+      'ed25519-sk',
+    ],
+    Optional['user']            => String[1],
+  }
+]

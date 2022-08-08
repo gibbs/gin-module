@@ -1,0 +1,23 @@
+---
+version: 5
+
+defaults:
+  datadir: data
+  data_hash: yaml_data
+
+hierarchy:
+  - name: 'Environment (test data)'
+    globs:
+      - '%{facts.environment}/*_rspec.yaml'
+
+  - name: 'Component Data'
+    globs:
+      - 'component/%{facts.os.family}/%{facts.os.name}-%{facts.os.release.major}/*.yaml'
+      - 'component/%{facts.os.family}/*.yaml'
+      - 'component/*.yaml'
+
+  - name: 'Components'
+    path: 'components.yaml'
+
+  - name: 'Lookup Options'
+    path: 'lookup.yaml'

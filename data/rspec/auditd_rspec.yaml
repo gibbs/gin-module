@@ -1,0 +1,30 @@
+gin::auditd:
+  failure_mode: 1
+  immutable: false
+  buffer_size: 8192
+  config:
+    local_events: 'yes'
+    priority_boost: 4
+    flush: incremental
+    write_logs: 'yes'
+    num_logs: 4
+    max_log_file: 25
+    verify_email: 'no'
+    space_left: 75
+    space_left_action: email
+    admin_space_left: 50
+    admin_space_left_action: email
+    disk_full_action: rotate
+    disk_error_action: syslog
+
+gin::auditd_rules:
+  sudo_log:
+    content: '-w /var/log/sudo.log -p wa -k actions'
+  apparmor_acl:
+    content: '-w /etc/apparmor/ -p wa -k MAC-policy'
+  apparmor_acl_alt:
+    content: '-w /etc/apparmor.d/ -p wa -k MAC-policy'
+  selinux_acl:
+    content: '-w /etc/selinux/ -p wa -k MAC-policy'
+  selinux_acl_shared:
+    content: '-w /usr/share/selinux/ -p wa -k MAC-policy'

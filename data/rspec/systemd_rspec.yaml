@@ -1,0 +1,86 @@
+gin::systemd:
+  manage_resolved:  true
+  manage_networkd:  true
+  manage_journald:  true
+  manage_timesyncd: true
+  journald_settings:
+    Storage: persistent
+    Compress: 'yes'
+    ForwardToSyslog: 'no'
+    MaxLevelStore: 'notice'
+    MaxLevelSyslog: 'notice'
+    MaxLevelKMsg: 'notice'
+    MaxLevelConsole: 'info'
+    MaxLevelWall: 'emerg'
+  dns:
+    - '9.9.9.9'
+    - '149.112.112.112'
+  ntp_server:
+    - 0.uk.pool.ntp.org
+    - 1.uk.pool.ntp.org
+    - ntp2a.mcc.ac.uk
+    - ntp2b.mcc.ac.uk
+    - ntp2c.mcc.ac.uk
+    - ntp.exnet.com
+  fallback_ntp_server:
+    - 2.pool.ntp.org
+    - 3.pool.ntp.org
+
+gin::systemd_dropin_files:
+  foo.conf:
+    unit: foo.service
+    content: >-
+      [Service]
+      EnvironmentFile=-/etc/foo
+
+gin::systemd_units:
+  foo.service:
+    enable: true
+    active: true
+    content: >-
+      [Service]
+      EnvironmentFile=-/etc/foo
+
+gin::systemd_timers:
+  runoften.timer:
+    timer_content: >-
+      [Timer]
+      OnCalendar=daily
+      RandomizedDelaySec=1d
+    service_content: >-
+      [Service]
+      Type=oneshot
+      ExecStart=/usr/bin/touch /tmp/file
+    active: true
+    enable: true
+
+gin::systemd_modules_load:
+  impi.conf:
+    content: "ipmi\n"
+
+gin::systemd_service_limits:
+  foo.service:
+    limits:
+      LimitNOFILE: 8192
+      LimitNPROC: 16384
+
+gin::systemd_networks:
+  eth0.network:
+    restart_service: false
+    content: >-
+      [Match]
+      Name=eth0*
+
+      [Network]
+      DHCP=yes
+
+  enp3s0.network:
+    restart_service: false
+    content: >-
+      [Match]
+      Name=enp3s0
+
+      [Network]
+      Address=192.168.10.50/24
+      Gateway=192.168.10.1
+      DNS=8.8.8.8

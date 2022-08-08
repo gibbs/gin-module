@@ -1,0 +1,124 @@
+gin::services:
+  autofs:
+    ensure: stopped
+    enable: false
+
+  avahi-daemon:
+    ensure: stopped
+    enable: false
+
+  bind9:
+    ensure: stopped
+    enable: false
+
+  cloud-config:
+    ensure: stopped
+    enable: false
+
+  cloud-final:
+    ensure: stopped
+    enable: false
+
+  cloud-init-local:
+    ensure: stopped
+    enable: false
+
+  cloud-init:
+    ensure: stopped
+    enable: false
+
+  cups:
+    ensure: stopped
+    enable: false
+
+  isc-dhcp-server6:
+    ensure: stopped
+    enable: false
+
+  rsync:
+    ensure: stopped
+    enable: false
+
+  rsyncd:
+    ensure: stopped
+    enable: false
+
+  named:
+    ensure: stopped
+    enable: false
+
+  nis:
+    ensure: stopped
+    enable: false
+
+  nfs:
+    ensure: stopped
+    enable: false
+
+  nfs-server:
+    ensure: stopped
+    enable: false
+
+  ntp:
+    ensure: stopped
+    enable: false
+
+  openntpd:
+    ensure: stopped
+    enable: false
+
+  rpcbind:
+    ensure: stopped
+    enable: false
+
+  slapd:
+    ensure: stopped
+    enable: false
+
+  snapd.apparmor:
+    ensure: stopped
+    enable: false
+
+  snapd.autoimport:
+    ensure: stopped
+    enable: false
+
+  snapd.core-fixup:
+    ensure: stopped
+    enable: false
+
+  snapd.recovery-chooser-trigger:
+    ensure: stopped
+    enable: false
+
+  snapd.seeded:
+    ensure: stopped
+    enable: false
+
+  snapd:
+    ensure: stopped
+    enable: false
+
+  snapd.system-shutdown:
+    ensure: stopped
+    enable: false
+
+  snap.lxd.activate:
+    ensure: stopped
+    enable: false
+
+  snap.lxd.daemon:
+    ensure: stopped
+    enable: false
+
+  smbd:
+    ensure: stopped
+    enable: false
+
+  squid:
+    ensure: stopped
+    enable: false
+
+  vsftpd:
+    ensure: stopped
+    enable: false

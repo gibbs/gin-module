@@ -1,0 +1,32 @@
+# @see https://github.com/puppetlabs/puppetlabs-lvm/blob/v1.4.0/manifests/logical_volume.pp
+type Gin::LVM::Logical_Volume = Struct[
+  {
+    Optional['volume_group']      => Any,
+    Optional['size']              => Any,
+    Optional['initial_size']      => Any,
+    Optional['ensure']            => Enum['absent', 'present'],
+    Optional['options']           => Any,
+    Optional['pass']              => Any,
+    Optional['dump']              => Any,
+    Optional['fs_type']           => Any,
+    Optional['mkfs_options']      => Any,
+    Optional['mountpath']         => Stdlib::Absolutepath,
+    Optional['mountpath_require'] => Boolean,
+    Optional['mounted']           => Boolean,
+    Optional['createfs']          => Boolean,
+    Optional['extents']           => Any,
+    Optional['stripes']           => Any,
+    Optional['stripesize']        => Any,
+    Optional['readahead']         => Any,
+    Optional['range']             => Any,
+    Optional['size_is_minsize']   => Any,
+    Optional['type']              => Any,
+    Optional['thinpool']          => Variant[Boolean, String],
+    Optional['poolmetadatasize']  => Any,
+    Optional['mirror']            => Any,
+    Optional['mirrorlog']         => Any,
+    Optional['no_sync']           => Any,
+    Optional['region_size']       => Any,
+    Optional['alloc']             => Any,
+  }
+]

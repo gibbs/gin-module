@@ -1,0 +1,8 @@
+gin::packages:
+  vim:
+    ensure: installed
+  telnet:
+    ensure: absent
+  rubocop:
+    ensure: installed
+    provider: gem

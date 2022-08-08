@@ -1,0 +1,28 @@
+gin::logrotate:
+  create_base_rules: true
+  manage_cron_daily: true
+  manage_cron_hourly: true
+  purge_configdir: true
+
+gin::logrotate_rules:
+  alternatives:
+    path: /var/log/alternatives.log
+    rotate_every: month
+    rotate: 12
+    compress: true
+    delaycompress: true
+    missingok: true
+    ifempty: false
+    create: true
+    create_mode: '640'
+    create_owner: root
+    create_group: root
+  pxp-agent:
+    path: /var/log/puppetlabs/pxp-agent/*.log
+    rotate_every: day
+    rotate: 30
+    compress: true
+    ifempty: false
+    sharedscripts: true
+    postrotate: >-
+      systemctl is-active --quiet pxp-agent.service && systemctl kill --signal=USR2 --kill-who=main pxp-agent.service

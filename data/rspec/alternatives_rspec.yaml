@@ -1,0 +1,14 @@
+gin::alternatives:
+  aptitude:
+    path: /usr/bin/aptitude-curses
+  cc:
+    path: /usr/bin/gcc
+  editor:
+    path: /usr/bin/vim.tiny
+
+gin::alternative_entries:
+  /usr/bin/gcc-4.4:
+    ensure: present
+    altlink: /usr/bin/gcc
+    altname: gcc
+    priority: 10

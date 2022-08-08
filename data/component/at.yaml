@@ -1,0 +1,5 @@
+gin::at:
+  package_ensure: absent
+  package_name: at
+  service_ensure: stopped
+  service_enable: false

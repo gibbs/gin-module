@@ -1,0 +1,7 @@
+gin::grub:
+  enable: true
+  user: root
+  password: mypassword
+  password_salt: mysalt
+  password_rounds: 20000
+  boot_without_password: false

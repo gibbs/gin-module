@@ -1,0 +1,32 @@
+gin::locales:
+  default_locale: 'en_US.UTF-8'
+  ensure: present
+  locales:
+    - en_US.UTF-8 UTF-8
+  language: en_US.UFT-8
+  lc_address: en_US.UTF-8
+  lc_all: en_US.UTF-8
+  lc_collate: en_US.UTF-8
+  lc_ctype: en_US.UTF-8
+  lc_identification: en_US.UTF-8
+  lc_measurement: en_US.UTF-8
+  lc_messages: en_US.UTF-8
+  lc_monetary: en_US.UTF-8
+  lc_name: en_US.UTF-8
+  lc_numeric: en_US.UTF-8
+  lc_paper: en_US.UTF-8
+  lc_telephone: en_US.UTF-8
+  lc_time: en_US.UTF-8
+
+  # The following are automatically set dependening on the distribution
+  default_file: /etc/default/locale
+  locale_gen_cmd: /usr/sbin/locale-gen
+  update_locale_cmd: /usr/sbin/update-locale
+  supported_locales: /usr/share/i18n/SUPPORTED
+  package: locales
+  config_file: /etc/locale.gen
+  update_locale_pkg: libc-bin
+  root_uses_lang: ctype
+  installed_languages: ''
+  auto_detect_utf8: 'no'
+  input_method: ''

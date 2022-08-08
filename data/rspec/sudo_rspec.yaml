@@ -1,0 +1,8 @@
+gin::sudo:
+  purge: true
+  config_file_replace: true
+
+gin::sudoers:
+  user1:
+    content: 'user1 ALL=(ALL) ALL'
+    priority: 50

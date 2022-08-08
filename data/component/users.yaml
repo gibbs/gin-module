@@ -1,0 +1,29 @@
+gin::users:
+  ubuntu:
+    ensure:          absent
+    purge_sshkeys:   true
+    purge_user_home: true
+
+  vagrant:
+    ensure:          absent
+    purge_sshkeys:   true
+    purge_user_home: true
+
+  provision:
+    ensure:          absent
+    purge_sshkeys:   true
+    purge_user_home: true
+
+  systemd-coredump:
+    ensure: absent
+
+gin::groups:
+  admin:
+    ensure: present
+    gid:    '3000'
+  sudo:
+    ensure: present
+    gid:    '3001'
+  power:
+    ensure: present
+    gid:    '4000'

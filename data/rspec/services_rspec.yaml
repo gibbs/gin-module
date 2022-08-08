@@ -1,0 +1,7 @@
+gin::services:
+  autofs:
+    ensure: stopped
+    enable: false
+  bind9:
+    ensure: running
+    enable: true

@@ -1,0 +1,31 @@
+# @see https://github.com/saz/puppet-sudo/blob/master/manifests/init.pp
+type Gin::Sudo = Struct[
+  {
+    Optional['config_dir']          => String,
+    Optional['config_dir_keepme']   => Boolean,
+    Optional['config_dir_mode']     => String,
+    Optional['config_file']         => String,
+    Optional['config_file_mode']    => String,
+    Optional['config_file_replace'] => Boolean,
+    Optional['configs']             => Hash,
+    Optional['content']             => String,
+    Optional['delete_on_error']     => Boolean,
+    Optional['enable']              => Boolean,
+    Optional['extra_include_dirs']  => Array[String],
+    Optional['ldap_enable']         => Boolean,
+    Optional['package']             => String,
+    Optional['package_admin_file']  => String,
+    Optional['package_ensure']      => String,
+    Optional['package_ldap']        => String,
+    Optional['package_provider']    => String,
+    Optional['package_source']      => String,
+    Optional['purge']               => Boolean,
+    Optional['purge_ignore']        => Variant[String, Array[String]],
+    Optional['secure_path']         => String,
+    Optional['sudoreplay_discard']  => Array[String],
+    Optional['suffix']              => String,
+    Optional['use_sudoreplay']      => Boolean,
+    Optional['validate_single']     => Boolean,
+    Optional['wheel_config']        => Enum['absent','password','nopassword'],
+  }
+]

@@ -1,0 +1,40 @@
+gin::login_defs:
+  owner: 0
+  group: 0
+  mode: '0644'
+  options:
+    PASS_MAX_DAYS:
+      value: 60
+      comment: |-
+        Password aging controls:
+
+          PASS_MAX_DAYS	Maximum number of days a password may be used.
+          PASS_MIN_DAYS	Minimum number of days allowed between password changes.
+          PASS_WARN_AGE	Number of days warning given before a password expires.
+    PASS_MIN_DAYS:
+      value: 1
+    PASS_WARN_AGE:
+      value: 14
+
+    SHA_CRYPT_MIN_ROUNDS:
+      value: 640000
+    SHA_CRYPT_MAX_ROUNDS:
+      value: 640000
+
+    USERGROUPS_ENAB:
+      value: 'yes'
+      comment: |-
+        Enable setting of the umask group bits to be the same as owner bits
+        (examples: 022 -> 002, 077 -> 007) for non-root users, if the uid is
+        the same as gid, and username is the same as the primary group name.
+
+        If set to yes, userdel will remove the user's group if it contains no
+        more members, and useradd will create by default a group with the name
+        of the user.
+
+    UID_MIN:
+      value: 1000
+      comment: Min/max values for automatic uid selection in useradd
+
+    UMASK:
+      value: '027'

@@ -1,0 +1,8 @@
+gin::rkhunter:
+  scriptwhitelist:
+    - /bin/egrep
+    - /bin/fgrep
+    - /bin/which
+    - /usr/bin/groups
+    - /usr/bin/ldd
+    - /usr/sbin/adduser

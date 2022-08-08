@@ -1,0 +1,3 @@
+--relative
+--no-manifest_whitespace_opening_brace_before-check
+--no-strict_indent-check

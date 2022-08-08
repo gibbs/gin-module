@@ -1,0 +1,39 @@
+gin::packages:
+  apt-show-versions:
+    ensure: installed
+  debian-goodies:
+    ensure: installed
+  debsums:
+    ensure: installed
+  duc:
+    ensure: installed
+  htop:
+    ensure: installed
+  lm-sensors:
+    ensure: installed
+  lsb-base:
+    ensure: installed
+  tmux:
+    ensure: installed
+  systemd-timesyncd:
+    ensure: installed
+  unzip:
+    ensure: installed
+  update-motd:
+    ensure: installed
+  vim:
+    ensure: installed
+  chrony:
+    ensure: absent
+  cloud-init:
+    ensure: absent
+  landscape-client:
+    ensure: absent
+  landscape-common:
+    ensure: absent
+  multipath-tools:
+    ensure: absent
+  rsyslog:
+    ensure: absent
+  telnet:
+    ensure: absent

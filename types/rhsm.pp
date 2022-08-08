@@ -1,0 +1,30 @@
+# @see https://github.com/voxpupuli/puppet-rhsm/blob/v5.0.0/manifests/init.pp
+type Gin::Rhsm = Struct[
+  {
+    Optional['rh_user']               => String[1],
+    Optional['rh_password']           => String[1],
+    Optional['org']                   => String[1],
+    Optional['activationkey']         => String[1],
+    Optional['proxy_hostname']        => Stdlib::Fqdn,
+    Optional['proxy_scheme']          => Enum['http', 'https'],
+    Optional['proxy_port']            => Stdlib::Port,
+    Optional['proxy_user']            => String[1],
+    Optional['proxy_password']        => String[1],
+    Optional['no_proxy']              => String[1],
+    Optional['baseurl']               => Stdlib::Httpurl,
+    Optional['servername']            => Stdlib::Fqdn,
+    Optional['serverprefix']          => Stdlib::Absolutepath,
+    Optional['serverport']            => Stdlib::Port,
+    Optional['ca_cert_dir']           => Stdlib::Absolutepath,
+    Optional['repo_ca_cert_filename'] => String[1],
+    Optional['repo_ca_cert_source']   => String[1],
+    Optional['manage_repos']          => Integer[0,1],
+    Optional['full_refresh_on_yum']   => Integer[0,1],
+    Optional['package_ensure']        => String[1],
+    Optional['enabled_repo_ids']      => Array[String[1]],
+    Optional['inotify']               => Integer[0,1],
+    Optional['server_timeout']        => Integer[0],
+    Optional['process_timeout']       => Integer[0],
+    Optional['plugin_settings']       => Hash,
+  }
+]

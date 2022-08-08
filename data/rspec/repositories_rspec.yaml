@@ -1,0 +1,31 @@
+gin::repositories:
+  /path/to/repo1:
+    ensure: present
+    provider: git
+    source: 'git://example.com/repo.git'
+    revision: 0c466b8a5a45f6cd7de82c08df2fb4ce1e920a31
+    user: someuser
+
+  /path/to/repo2:
+    ensure: latest
+    provider: git
+    source: 'git://example.com/repo.git'
+    revision: main
+
+  /vagrant/lockss-daemon-source:
+    ensure: present
+    provider: cvs
+    source: ':pserver:anonymous@lockss.cvs.sourceforge.net:/cvsroot/lockss'
+    revision: lockss-daemon
+
+  /path/to/repo3:
+    ensure: present
+    provider: hg
+    source: 'http://hg.example.com/myrepo'
+    revision: 21ea4598c962
+
+  /path/to/repo4:
+    ensure: present
+    provider: svn
+    source: 'svn://svnrepo/hello/branches/foo'
+    revision: 1234

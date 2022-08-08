@@ -1,0 +1,5 @@
+gin::cron:
+  explicit_mode: true
+  purge: true
+  mailto:
+    - root

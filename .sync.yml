@@ -1,0 +1,109 @@
+---
+appveyor.yml:
+  delete: true
+.gitignore:
+  paths:
+    - /[Bb]ackup*/
+    - /.devcontainer/
+    - /.gitlab-ci.yml
+    - /.tmp/
+    - /.travis.yml
+    - /.vscode/
+    - /appveyor.yml
+    - /modules/
+.gitattributes:
+  include:
+    '*': text=auto eol=lf
+    /lib/tasks/: export-ignore
+    /spec/: export-ignore
+    .editorconfig: export-ignore
+    .gitattributes: export-ignore
+    .puppet-lint.rc: export-ignore
+    .gitignore: export-ignore
+    .rspec: export-ignore
+    .ruby-version: export-ignore
+    Gemfile.lock: export-ignore
+    Rakefile: export-ignore
+.gitlab-ci.yml:
+  delete: true
+.travis.yml:
+  delete: true
+.devcontainer:
+  delete: true
+.vscode:
+  delete: true
+.pdkignore:
+  paths:
+    - /[Bb]ackup*/
+    - /provision.yaml
+    - /modules/
+    - /lib/tasks/
+    - /data/rspec/
+Gemfile:
+  optional:
+    ':development':
+      - gem: github_changelog_generator
+        version: '~> 1.15'
+        condition: "Gem::Version.new(RUBY_VERSION.dup) >= Gem::Version.new('2.3.0')"
+      - gem: opml-handler
+        version: '~> 1.0.2'
+      - gem: librarian-puppet
+    ':test':
+      - gem: 'puppet_metadata'
+        version: '~> 1.0'
+    ':linting':
+      - gem: puppet-lint
+      - gem: puppet-lint-appends-check
+      - gem: puppet-lint-classes_and_types_beginning_with_digits-check
+      - gem: puppet-lint-empty_string-check
+      - gem: puppet-lint-file_ensure-check
+      - gem: puppet-lint-leading_zero-check
+      - gem: puppet-lint-package_ensure-check
+      - gem: puppet-lint-resource_reference_syntax
+      - gem: puppet-lint-spaceship_operator_without_tag-check
+      - gem: puppet-lint-trailing_comma-check
+      - gem: puppet-lint-undef_in_function-check
+      - gem: puppet-lint-unquoted_string-check
+      - gem: puppet-lint-variable_contains_upcase
+      - gem: puppet-lint-version_comparison-check
+Rakefile:
+  default_disabled_lint_checks:
+    - manifest_whitespace_opening_brace_before
+    - strict_indent
+  extras:
+    - 'Rake::Task[:lint].clear'
+    - |-
+      PuppetLint::RakeTask.new :lint do |config|
+        config.relative = true
+        config.ignore_paths = %w(
+          spec/**/*
+          modules/**/*
+        )
+        config.pattern = [
+          'manifests/**/*.pp',
+        ]
+        config.disable_checks = [
+          'relative',
+          'class_inherits_from_params_class',
+        ]
+        config.fail_on_warnings = true
+      end
+    - "Rake::Task['spec_clean'].clear()"
+
+spec/default_facts.yml:
+  extra_facts:
+    environment: rspec
+    pe_server_version: null
+    pe_logpath: null
+    pe_journalpath: null
+    pe_configpath: null
+    pe_build: null
+    service_provider: systemd
+    root_home: /root
+
+spec/spec_helper.rb:
+  coverage_report: true
+  spec_overrides:
+    - 'RSpec.configure do |c|'
+    - '  c.facter_implementation = :rspec'
+    - 'end'

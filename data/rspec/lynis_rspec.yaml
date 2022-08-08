@@ -1,0 +1,5 @@
+gin::lynis:
+  source: https://github.com/CISOfy/lynis/archive/refs/tags/2.7.5.tar.gz
+  checksum: d3790342e3f1982fd4b75072c9bebe543d5addf3
+  checksum_type: sha1
+  path: /var/tmp/lynis-3.0.7.tar.gz

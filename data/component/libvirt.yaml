@@ -1,0 +1,12 @@
+gin::libvirt:
+  service_name: libvirtd
+  service_ensure: running
+  service_enable: true
+  manage_service: true
+  evacuation: migrate
+  max_job_time: '120'
+  suspend_multiplier: '5'
+  migration_url_format: ssh
+  config_dir: /etc/libvirt
+  manage_domains_config: /etc/manage-domains.ini
+  drop_default_net: false

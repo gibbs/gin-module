@@ -1,0 +1,23 @@
+gin::packages:
+  apt-transport-https:
+    ensure: installed
+  libpam-pwquality:
+    ensure: installed
+  util-linux:
+    ensure: installed
+  ldap-utils:
+    ensure: absent
+  ntp:
+    ensure: absent
+  openbsd-inetd:
+    ensure: absent
+  openntpd:
+    ensure: absent
+  prelink:
+    ensure: absent
+  rsh-client:
+    ensure: absent
+  talk:
+    ensure: absent
+  ufw:
+    ensure: absent

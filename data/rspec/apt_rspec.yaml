@@ -1,0 +1,44 @@
+gin::apt_conf:
+  progressbar:
+    content: Dpkg::Progress-Fancy "1";
+    priority: 99
+
+gin::apt_keys:
+  puppetlabs:
+    id: 6F6B15509CF8E59E6E469F327F438280EF8D349F
+    server: pgp.mit.edu
+
+gin::apt_marks:
+  ruby:
+    setting: manual
+  emacs:
+    setting: hold
+
+gin::apt_pins:
+  docker:
+    ensure: present
+    origin: download.docker.com
+    priority: 500
+
+gin::apt_ppas:
+  ppa:ondrej/apache2: {}
+  ppa:ondrej/php: {}
+
+gin::apt_sources:
+  ubuntu-partner:
+    location: http://archive.ubuntu.com/ubuntu
+    repos: partner
+    include:
+      deb: true
+      src: false
+
+gin::apt_composer:
+  logrotate:
+    apt:
+      path:
+        - /var/log/apt/term.log
+        - /var/log/apt/history.log
+      rotate_every: month
+      compress: true
+      missingok: true
+      ifempty: false

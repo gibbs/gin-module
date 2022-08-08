@@ -1,0 +1,52 @@
+gin::kmod:
+  list_of_blacklists:
+    dccp:
+      ensure: present
+    freevxfs:
+      ensure: present
+    jffs2:
+      ensure: present
+    hfs:
+      ensure: present
+    hfsplus:
+      ensure: present
+    rds:
+      ensure: present
+    sctp:
+      ensure: present
+    squashfs:
+      ensure: present
+    tipc:
+      ensure: present
+    udf:
+      ensure: present
+    usb-storage:
+      ensure: present
+    vfat:
+      ensure: present
+
+  list_of_installs:
+    dccp:
+      command: /bin/true
+    freevxfs:
+      command: /bin/true
+    jffs2:
+      command: /bin/true
+    hfs:
+      command: /bin/true
+    hfsplus:
+      command: /bin/true
+    rds:
+      command: /bin/true
+    sctp:
+      command: /bin/true
+    squashfs:
+      command: /bin/true
+    tipc:
+      command: /bin/true
+    udf:
+      command: /bin/true
+    usb-storage:
+      command: /bin/true
+    vfat:
+      command: /bin/true

@@ -1,0 +1,19 @@
+gin::aide_rules:
+  homerule:
+    rules: 'p+u+g+acl+selinux+xattrs'
+
+gin::aide_watch:
+  aide_root:
+    path:  /root
+    rules: all
+  aide_root_ignore:
+    path:  /root/.cache/
+    rules: [all, permissions, content, data]
+    type:  exclude
+  aide_home:
+    path: '/home'
+    rules: homerule
+  aide_home_exclude:
+    path: '/home/*/.cache/*'
+    rules: [all, permissions, content, data, homerule]
+    type:  exclude

@@ -1,0 +1,61 @@
+gin::libvirt:
+  qemu_hook: drbd
+
+gin::libvirt_networks:
+  net-simple:
+    forward_mode: bridge
+    bridge: br-simple
+  net-ovs:
+    forward_mode: bridge
+    bridge: br-ovs
+    virtualport_type: openvswitch
+    autostart: true
+    portgroups:
+      - name: intern
+        trunk: false
+        vlan_tag: '2'
+      - name: trunk
+        trunk: true
+        vlan_tag: [100, 101, 102]
+
+gin::libvirt_domains:
+  my-domain:
+    devices_profile: default
+    dom_profile: default
+    boot: hd
+    disks:
+      - type: block
+        device: disk
+        source:
+          dev: /dev/vm-pool/my-domain.img
+      - type: file
+        device: disk
+        source:
+          dev: /var/lib/libvirt/images/my-disk.qcow2
+        bus: virtio
+        driver:
+          name: qemu
+          type: qcow2
+          cache: none
+    interfaces:
+      - network: net-simple
+    autostart: true
+
+gin::libvirt_pools:
+  default:
+    ensure: present
+    type: logical
+    autostart: true
+    sourcedev: /dev/sda5
+    sourcename: vm
+    target: /dev/vm
+
+gin::libvirt_device_profiles:
+  myprofile:
+    hostdev:
+      attrs:
+        mode: 'capabilities'
+        type: 'misc'
+      values:
+        source:
+           values: '/dev/input/event3'

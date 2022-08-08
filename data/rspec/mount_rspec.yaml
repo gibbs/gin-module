@@ -1,0 +1,6 @@
+gin::mount:
+  /dev/shm:
+    ensure: mounted
+    device: tmpfs
+    fstype: tmpfs
+    options: remount,noexec,nosuid,nodev

@@ -1,0 +1,22 @@
+ginn::docker:
+  docker_ee: false
+
+gin::docker_images:
+  traefik:
+    image_tag: v2.5
+
+gin::docker_run:
+  httpd:
+    ensure: present
+    image: httpd:2.4-alpine3.14
+    ports:
+      - '127.0.0.1:8080:80'
+    volumes:
+      - '/var/www/:/var/www/'
+
+gin::docker_composer:
+  exporter_proxy:
+    method: http
+    http:
+      address: '127.0.0.1'
+      port: 9323

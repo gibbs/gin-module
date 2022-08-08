@@ -1,0 +1,18 @@
+gin::archives:
+  /tmp/vagrant.deb:
+    ensure: present
+    source: https://releases.hashicorp.com/vagrant/2.2.3/vagrant_2.2.3_x86_64.deb
+
+  /tmp/jta-1.1.jar:
+    extract: true
+    extract_path: /tmp
+    source: http://central.maven.org/maven2/javax/transaction/jta/1.1/jta-1.1.jar
+    checksum: 2ca09f0b36ca7d71b762e14ea2ff09d5eac57558
+    checksum_type: sha1
+    creates: /tmp/javax
+    cleanup: true
+
+  /tmp/test100k.db:
+    source: ftp://ftp.otenet.gr/test100k.db
+    username: speedtest
+    password: speedtest

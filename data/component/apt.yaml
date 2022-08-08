@@ -1,0 +1,21 @@
+gin::apt:
+  purge:
+    preferences: true
+    preferences.d: true
+  sources_list_force: false
+
+gin::apt_conf:
+  tempdir:
+    content: APT::ExtractTemplates::TempDir "/var/lib/apt/tmp/";
+    priority: 50
+
+gin::apt_composer:
+  logrotate:
+    apt:
+      path:
+        - /var/log/apt/term.log
+        - /var/log/apt/history.log
+      rotate_every: month
+      compress: true
+      missingok: true
+      ifempty: false

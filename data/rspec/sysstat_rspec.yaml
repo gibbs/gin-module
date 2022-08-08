@@ -1,0 +1,18 @@
+gin::sysstat:
+  compressafter: 31
+  cron_path: /etc/cron.d/sysstat
+  cron_path2: /etc/cron.daily/sysstat
+  disable: 'no'
+  generate_summary: 'yes'
+  history: 10
+  installpkg: 'yes'
+  interval: 2
+  package: sysstat
+  sa_dir: /var/log/sa
+  sa_umask: '0022'
+  sa1_options: -S ALL
+  sa2_delay_range: 0
+  sa2_hour: '23'
+  sa2_minute: '53'
+  sadc_options: -S DISK
+  zip: bzip2

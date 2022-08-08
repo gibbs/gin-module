@@ -1,0 +1,6 @@
+gin::grub:
+  enable: true
+  user: root
+  password: gin
+  password_salt: gin
+  boot_without_password: true

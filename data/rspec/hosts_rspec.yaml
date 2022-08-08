@@ -1,0 +1,9 @@
+gin::hosts:
+  mytestdomain.test:
+    ip: '127.0.0.5'
+
+  mylocaldomain.local:
+    ip: '127.0.0.6'
+    host_aliases:
+      - mylocaldomain.local
+      - mydomain.local

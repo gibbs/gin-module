@@ -1,0 +1,199 @@
+{
+  "name": "genv-gin",
+  "version": "0.1.0",
+  "author": "Dan Gibbs <dev@dangibbs.co.uk>",
+  "summary": "Gin Puppet module",
+  "license": "MIT",
+  "source": "https://github.com/gibbs/gin-module",
+  "dependencies": [
+    {
+      "name": "puppetlabs/accounts",
+      "version_requirement": "7.2.x"
+    },
+    {
+      "name": "iu/aide",
+      "version_requirement": "2.0.x"
+    },
+    {
+      "name": "puppet/alternatives",
+      "version_requirement": "4.1.x"
+    },
+    {
+      "name": "puppet/archive",
+      "version_requirement": "6.0.x"
+    },
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": "8.4.x"
+    },
+    {
+      "name": "genv/auditd",
+      "version_requirement": "1.0.x"
+    },
+    {
+      "name": "camptocamp/augeas",
+      "version_requirement": "1.9.x"
+    },
+    {
+      "name": "puppetlabs/augeas_core",
+      "version_requirement": "1.2.x"
+    },
+    {
+      "name": "herculesteam/augeasproviders_core",
+      "version_requirement": "3.1.x"
+    },
+    {
+      "name": "herculesteam/augeasproviders_sysctl",
+      "version_requirement": "2.6.x"
+    },
+    {
+      "name": "puppetlabs/concat",
+      "version_requirement": "6.4.x"
+    },
+    {
+      "name": "puppet/cron",
+      "version_requirement": "3.x"
+    },
+    {
+      "name": "puppetlabs/cron_core",
+      "version_requirement": "1.1.x"
+    },
+    {
+      "name": "puppetlabs/docker",
+      "version_requirement": "4.4.x"
+    },
+    {
+      "name": "puppet/epel",
+      "version_requirement": "4.1.x"
+    },
+    {
+      "name": "puppet/posix_acl",
+      "version_requirement": "2.0.x"
+    },
+    {
+      "name": "puppetlabs/host_core",
+      "version_requirement": "1.1.x"
+    },
+    {
+      "name": "puppet/kmod",
+      "version_requirement": "3.2.x"
+    },
+    {
+      "name": "cirrax/libvirt",
+      "version_requirement": "4.3.x"
+    },
+    {
+      "name": "saz/locales",
+      "version_requirement": "3.x"
+    },
+    {
+      "name": "genv/login_defs",
+      "version_requirement": "1.0.x"
+    },
+    {
+      "name": "puppet/logrotate",
+      "version_requirement": "6.0.x"
+    },
+    {
+      "name": "puppetlabs/lvm",
+      "version_requirement": "1.4.x"
+    },
+    {
+      "name": "puppetlabs/mount_core",
+      "version_requirement": "1.1.x"
+    },
+    {
+      "name": "puppet/nftables",
+      "version_requirement": "2.4.x"
+    },
+    {
+      "name": "trlinkin/nsswitch",
+      "version_requirement": "2.2.x"
+    },
+    {
+      "name": "ghoneycutt/pam",
+      "version_requirement": "3.7.x"
+    },
+    {
+      "name": "puppet/rkhunter",
+      "version_requirement": "2.2.x"
+    },
+    {
+      "name": "puppet/rhsm",
+      "version_requirement": "5.0.x"
+    },
+    {
+      "name": "puppet/snmp",
+      "version_requirement": "6.0.x"
+    },
+    {
+      "name": "saz/ssh",
+      "version_requirement": "9.0.x"
+    },
+    {
+      "name": "puppet/ssh_keygen",
+      "version_requirement": "5.0.x"
+    },
+    {
+      "name": "puppetlabs/sshkeys_core",
+      "version_requirement": "2.3.x"
+    },
+    {
+      "name": "qtechnologies/sysstat",
+      "version_requirement": "1.2.6"
+    },
+    {
+      "name": "puppet/systemd",
+      "version_requirement": "3.10.x"
+    },
+    {
+      "name": "saz/sudo",
+      "version_requirement": "7.0.x"
+    },
+    {
+      "name": "saz/timezone",
+      "version_requirement": "6.x"
+    },
+    {
+      "name": "puppetlabs/vcsrepo",
+      "version_requirement": "5.2.x"
+    },
+    {
+      "name": "puppet/yum",
+      "version_requirement": "5.6.x"
+    },
+    {
+      "name": "puppetlabs/yumrepo_core",
+      "version_requirement": "1.1.x"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "10"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "20.04"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 6.21.0 < 8.0.0"
+    }
+  ],
+  "pdk-version": "2.5.0",
+  "template-url": "https://github.com/puppetlabs/pdk-templates#2.5.0",
+  "template-ref": "tags/2.5.0-0-g369d483"
+}

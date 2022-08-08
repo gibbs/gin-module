@@ -1,0 +1,9 @@
+gin::at:
+  package_name: at
+  package_ensure: present
+  service_ensure: running
+  service_enable: true
+
+gin::at_users:
+  - root
+  - testuser

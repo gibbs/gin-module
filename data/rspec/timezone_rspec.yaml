@@ -1,0 +1,15 @@
+gin::timezone:
+  timezone: Etc/UTC
+  ensure: present
+  autoupgrade: false
+  hwutc: true
+  #notify_services:
+  #  - sshd
+
+  # The following are automatically set dependening on the distribution
+  localtime_file: /etc/localtime
+  package: tzdata
+  timezone_file: /etc/timezone
+  timezone_file_supports_comment: false
+  timezone_update: dpkg-reconfigure -f noninteractive tzdata
+  zoneinfo_dir: /usr/share/zoneinfo

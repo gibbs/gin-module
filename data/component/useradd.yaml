@@ -1,0 +1,8 @@
+gin::useradd:
+  group: 100
+  inactive: 30
+  shell: /usr/sbin/nologin
+  skel: /etc/skel
+  file_owner: 0
+  file_group: 0
+  file_mode: '0600'

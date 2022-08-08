@@ -1,0 +1,41 @@
+gin::apt:
+  purge:
+    sources.list: true
+    sources.list.d: true
+
+gin::apt_sources:
+  puppet7:
+    location: http://apt.puppetlabs.com
+    release: bullseye
+    repos: puppet7
+    include:
+      deb: true
+      src: false
+  debian:
+    location: http://deb.debian.org/debian
+    release: bullseye
+    repos: main
+    include:
+      deb: true
+      src: true
+  debian-security:
+    location: http://security.debian.org/debian-security
+    release: bullseye-security
+    repos: main
+    include:
+      deb: true
+      src: true
+  debian-updates:
+    location: http://deb.debian.org/debian
+    release: bullseye-updates
+    repos: main
+    include:
+      deb: true
+      src: true
+  debian-backports:
+    location: http://deb.debian.org/debian
+    release: bullseye-backports
+    repos: main
+    include:
+      deb: true
+      src: true

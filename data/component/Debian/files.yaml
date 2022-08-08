@@ -1,0 +1,48 @@
+gin::files:
+  /etc/group:
+    ensure: file
+    owner: root
+    group: root
+    mode: '0644'
+
+  /etc/group-:
+    ensure: file
+    owner: root
+    group: root
+    mode: '0600'
+
+  /etc/passwd:
+    ensure: file
+    owner: root
+    group: root
+    mode: '0644'
+
+  /etc/passwd-:
+    ensure: file
+    owner: root
+    group: root
+    mode: '0600'
+
+  /etc/shadow:
+    ensure: file
+    owner: root
+    group: shadow
+    mode: '0640'
+
+  /etc/shadow-:
+    ensure: file
+    owner: root
+    group: shadow
+    mode: '0600'
+
+  /etc/gshadow:
+    ensure: file
+    owner: root
+    group: shadow
+    mode: '0640'
+
+  /etc/gshadow-:
+    ensure: file
+    owner: root
+    group: shadow
+    mode: '0640'

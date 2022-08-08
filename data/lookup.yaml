@@ -1,0 +1,5 @@
+# @see https://puppet.com/docs/puppet/7/hiera_merging.html#merge_behaviors
+lookup_options:
+  'gin::^(.*)$':
+    merge:
+      strategy: deep

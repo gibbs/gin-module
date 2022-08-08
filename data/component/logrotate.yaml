@@ -1,0 +1,5 @@
+gin::logrotate:
+  create_base_rules: true
+  manage_cron_daily: true
+  manage_cron_hourly: true
+  purge_configdir: false

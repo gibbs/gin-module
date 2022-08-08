@@ -1,0 +1,27 @@
+gin::users:
+  test1:
+    locked: false
+    password: test123
+
+  test2:
+    locked: false
+    password_hash: '$6$c1438c04cc830cf1$cV3.3aKnfhIF4X/Bzgm5YRqu/M38pfko9Y2fzgN6.4uaRendl2yHgIElYx0P4EzKkawnh1Ad2L/p.UZPRSeYP/'
+
+  systemuser1:
+    system: true
+
+  user3:
+    cron: true
+    ensure: present
+    groups:
+      - sudo
+    home_mode: '0711'
+    locked: false
+    managehome: true
+    managevim: true
+    password: testabc
+    password_max_age: 30
+    purge_sshkeys: false
+    shell: /bin/bash
+    sshkeys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9Tjom/BWDSUGPl+nafzlHDTYW7hdI4yZ5ew18JH4JW9jbhUFrviQzM7xlELEVf4h9lFX5QVkbPppSwg0cda3Pbv7kOdJ/MTyBlWXFCR+HAo3FXRitBqxiX1nKhXpHAZsMciLq8V6RjsNAQwdsdMFvSlVK/7XAt3FaoJoAsncM1Q9x5+3V0Ww68/eIFmb1zuUFljQJKprrX88XypNDvjYNby6vw/Pb0rwert/EnmZ+AW4OZPnTPI89ZPmVMLuayrD2cE86Z/il8b+gw3r3+1nKatmIkjn2so1d01QraTlMqVSsbxNrRFi9wrf+M7Q== schacon@mylaptop.local
