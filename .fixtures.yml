@@ -9,7 +9,7 @@ fixtures:
       ref:  "v7.2.0"
     aide:
       repo: "https://github.com/indiana-university/puppet-aide"
-      ref:  "v2.0.0"
+      ref:  "v2.1.0"
     alternatives:
       repo: "https://github.com/voxpupuli/puppet-alternatives"
       ref:  "v4.1.0"

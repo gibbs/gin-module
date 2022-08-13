@@ -4,8 +4,12 @@ gin::aide:
   db_temp_path: /var/lib/aide/aide.db.new.gz
   aide_log: /var/log/aide/aide.log
   syslogout: true
-  hour: 7
   minute: 0
+  hour: 7
+  date: '*'
+  month: '*'
+  weekday: '*'
+  exclude_config_argument: true
   mail_only_on_changes: true
   init_timeout: 600
 
