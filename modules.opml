@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>Gin module dependency feed</title>
+  </head>
+  <body>
+    <outline text="Gin Module Dependencies">
+      <outline type="rss" title="puppetlabs-accounts" text="puppetlabs-accounts" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/accounts" xmlUrl="https://forge.puppet.com/puppetlabs/accounts/rss"/>
+      <outline type="rss" title="iu-aide" text="iu-aide" version="RSS" htmlUrl="https://forge.puppet.com/modules/iu/aide" xmlUrl="https://forge.puppet.com/iu/aide/rss"/>
+      <outline type="rss" title="puppet-alternatives" text="puppet-alternatives" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/alternatives" xmlUrl="https://forge.puppet.com/puppet/alternatives/rss"/>
+      <outline type="rss" title="puppet-archive" text="puppet-archive" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/archive" xmlUrl="https://forge.puppet.com/puppet/archive/rss"/>
+      <outline type="rss" title="puppetlabs-apt" text="puppetlabs-apt" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/apt" xmlUrl="https://forge.puppet.com/puppetlabs/apt/rss"/>
+      <outline type="rss" title="genv-auditd" text="genv-auditd" version="RSS" htmlUrl="https://forge.puppet.com/modules/genv/auditd" xmlUrl="https://forge.puppet.com/genv/auditd/rss"/>
+      <outline type="rss" title="camptocamp-augeas" text="camptocamp-augeas" version="RSS" htmlUrl="https://forge.puppet.com/modules/camptocamp/augeas" xmlUrl="https://forge.puppet.com/camptocamp/augeas/rss"/>
+      <outline type="rss" title="puppetlabs-augeas_core" text="puppetlabs-augeas_core" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/augeas_core" xmlUrl="https://forge.puppet.com/puppetlabs/augeas_core/rss"/>
+      <outline type="rss" title="herculesteam-augeasproviders_core" text="herculesteam-augeasproviders_core" version="RSS" htmlUrl="https://forge.puppet.com/modules/herculesteam/augeasproviders_core" xmlUrl="https://forge.puppet.com/herculesteam/augeasproviders_core/rss"/>
+      <outline type="rss" title="herculesteam-augeasproviders_sysctl" text="herculesteam-augeasproviders_sysctl" version="RSS" htmlUrl="https://forge.puppet.com/modules/herculesteam/augeasproviders_sysctl" xmlUrl="https://forge.puppet.com/herculesteam/augeasproviders_sysctl/rss"/>
+      <outline type="rss" title="puppetlabs-concat" text="puppetlabs-concat" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/concat" xmlUrl="https://forge.puppet.com/puppetlabs/concat/rss"/>
+      <outline type="rss" title="puppet-cron" text="puppet-cron" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/cron" xmlUrl="https://forge.puppet.com/puppet/cron/rss"/>
+      <outline type="rss" title="puppetlabs-cron_core" text="puppetlabs-cron_core" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/cron_core" xmlUrl="https://forge.puppet.com/puppetlabs/cron_core/rss"/>
+      <outline type="rss" title="puppetlabs-docker" text="puppetlabs-docker" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/docker" xmlUrl="https://forge.puppet.com/puppetlabs/docker/rss"/>
+      <outline type="rss" title="puppet-epel" text="puppet-epel" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/epel" xmlUrl="https://forge.puppet.com/puppet/epel/rss"/>
+      <outline type="rss" title="puppet-posix_acl" text="puppet-posix_acl" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/posix_acl" xmlUrl="https://forge.puppet.com/puppet/posix_acl/rss"/>
+      <outline type="rss" title="puppetlabs-host_core" text="puppetlabs-host_core" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/host_core" xmlUrl="https://forge.puppet.com/puppetlabs/host_core/rss"/>
+      <outline type="rss" title="puppet-kmod" text="puppet-kmod" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/kmod" xmlUrl="https://forge.puppet.com/puppet/kmod/rss"/>
+      <outline type="rss" title="cirrax-libvirt" text="cirrax-libvirt" version="RSS" htmlUrl="https://forge.puppet.com/modules/cirrax/libvirt" xmlUrl="https://forge.puppet.com/cirrax/libvirt/rss"/>
+      <outline type="rss" title="saz-locales" text="saz-locales" version="RSS" htmlUrl="https://forge.puppet.com/modules/saz/locales" xmlUrl="https://forge.puppet.com/saz/locales/rss"/>
+      <outline type="rss" title="genv-login_defs" text="genv-login_defs" version="RSS" htmlUrl="https://forge.puppet.com/modules/genv/login_defs" xmlUrl="https://forge.puppet.com/genv/login_defs/rss"/>
+      <outline type="rss" title="puppet-logrotate" text="puppet-logrotate" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/logrotate" xmlUrl="https://forge.puppet.com/puppet/logrotate/rss"/>
+      <outline type="rss" title="puppetlabs-lvm" text="puppetlabs-lvm" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/lvm" xmlUrl="https://forge.puppet.com/puppetlabs/lvm/rss"/>
+      <outline type="rss" title="puppetlabs-mount_core" text="puppetlabs-mount_core" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/mount_core" xmlUrl="https://forge.puppet.com/puppetlabs/mount_core/rss"/>
+      <outline type="rss" title="puppet-nftables" text="puppet-nftables" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/nftables" xmlUrl="https://forge.puppet.com/puppet/nftables/rss"/>
+      <outline type="rss" title="trlinkin-nsswitch" text="trlinkin-nsswitch" version="RSS" htmlUrl="https://forge.puppet.com/modules/trlinkin/nsswitch" xmlUrl="https://forge.puppet.com/trlinkin/nsswitch/rss"/>
+      <outline type="rss" title="ghoneycutt-pam" text="ghoneycutt-pam" version="RSS" htmlUrl="https://forge.puppet.com/modules/ghoneycutt/pam" xmlUrl="https://forge.puppet.com/ghoneycutt/pam/rss"/>
+      <outline type="rss" title="puppet-rkhunter" text="puppet-rkhunter" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/rkhunter" xmlUrl="https://forge.puppet.com/puppet/rkhunter/rss"/>
+      <outline type="rss" title="puppet-rhsm" text="puppet-rhsm" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/rhsm" xmlUrl="https://forge.puppet.com/puppet/rhsm/rss"/>
+      <outline type="rss" title="puppet-snmp" text="puppet-snmp" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/snmp" xmlUrl="https://forge.puppet.com/puppet/snmp/rss"/>
+      <outline type="rss" title="saz-ssh" text="saz-ssh" version="RSS" htmlUrl="https://forge.puppet.com/modules/saz/ssh" xmlUrl="https://forge.puppet.com/saz/ssh/rss"/>
+      <outline type="rss" title="puppet-ssh_keygen" text="puppet-ssh_keygen" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/ssh_keygen" xmlUrl="https://forge.puppet.com/puppet/ssh_keygen/rss"/>
+      <outline type="rss" title="puppetlabs-sshkeys_core" text="puppetlabs-sshkeys_core" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/sshkeys_core" xmlUrl="https://forge.puppet.com/puppetlabs/sshkeys_core/rss"/>
+      <outline type="rss" title="qtechnologies-sysstat" text="qtechnologies-sysstat" version="RSS" htmlUrl="https://forge.puppet.com/modules/qtechnologies/sysstat" xmlUrl="https://forge.puppet.com/qtechnologies/sysstat/rss"/>
+      <outline type="rss" title="puppet-systemd" text="puppet-systemd" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/systemd" xmlUrl="https://forge.puppet.com/puppet/systemd/rss"/>
+      <outline type="rss" title="saz-sudo" text="saz-sudo" version="RSS" htmlUrl="https://forge.puppet.com/modules/saz/sudo" xmlUrl="https://forge.puppet.com/saz/sudo/rss"/>
+      <outline type="rss" title="saz-timezone" text="saz-timezone" version="RSS" htmlUrl="https://forge.puppet.com/modules/saz/timezone" xmlUrl="https://forge.puppet.com/saz/timezone/rss"/>
+      <outline type="rss" title="puppetlabs-vcsrepo" text="puppetlabs-vcsrepo" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/vcsrepo" xmlUrl="https://forge.puppet.com/puppetlabs/vcsrepo/rss"/>
+      <outline type="rss" title="puppet-yum" text="puppet-yum" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppet/yum" xmlUrl="https://forge.puppet.com/puppet/yum/rss"/>
+      <outline type="rss" title="puppetlabs-yumrepo_core" text="puppetlabs-yumrepo_core" version="RSS" htmlUrl="https://forge.puppet.com/modules/puppetlabs/yumrepo_core" xmlUrl="https://forge.puppet.com/puppetlabs/yumrepo_core/rss"/>
+    </outline>
+  </body>
+</opml>
