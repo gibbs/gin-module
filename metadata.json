@@ -104,7 +104,7 @@
     },
     {
       "name": "puppet/nftables",
-      "version_requirement": "2.4.x"
+      "version_requirement": "2.5.x"
     },
     {
       "name": "trlinkin/nsswitch",

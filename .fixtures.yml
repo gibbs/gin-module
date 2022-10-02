@@ -81,7 +81,7 @@ fixtures:
       ref:  "v1.1.0"
     nftables:
       repo: "https://github.com/voxpupuli/puppet-nftables"
-      ref:  "v2.4.0"
+      ref:  "v2.5.0"
     nsswitch:
       repo: "https://github.com/trlinkin/puppet-nsswitch"
       ref:  "2.2.0"

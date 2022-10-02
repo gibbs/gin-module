@@ -1,6 +1,7 @@
 # @summary nsswitch.conf configuration
 #
 # @api private
+#
 class gin::nsswitch {
   assert_private()
 
