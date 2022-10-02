@@ -111,6 +111,7 @@ spec/default_facts.yml:
 spec/spec_helper.rb:
   coverage_report: true
   spec_overrides:
-    - 'RSpec.configure do |c|'
-    - '  c.facter_implementation = :rspec'
-    - 'end'
+    - >
+      RSpec.configure do |c|
+        c.facter_implementation = :rspec
+      end

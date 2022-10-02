@@ -7,12 +7,13 @@ ipaddress6: "FE80:0000:0000:0000:AAAA:AAAA:AAAA"
 is_pe: false
 macaddress: "AA:AA:AA:AA:AA:AA"
 environment: rspec
-pe_server_version:
-pe_logpath:
-pe_journalpath:
-pe_configpath:
-pe_build:
+pe_server_version: 
+pe_logpath: 
+pe_journalpath: 
+pe_configpath: 
+pe_build: 
 service_provider: systemd
 root_home: "/root"
-sudoversion: '1.7.3'
+sudoversion: 1.7.3
 memorysize_mb: 2048
+
